@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  sniff:
+  sniff-linux:
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
     strategy:
@@ -24,6 +24,26 @@ jobs:
               name: "Ubuntu 20.04",
               os: ubuntu-20.04,
             }
+    steps:
+      - name: Check runner
+        run: |
+          uname --all
+          lscpu
+      - name: Check versions
+        run: |
+          clang --version
+          clang++ --version
+          cmake --version
+          gcc --version
+          g++ --version
+          git --version
+
+  sniff-macos:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        config:
           - {
               name: "macOS latest",
               os: macos-latest,
@@ -37,10 +57,12 @@ jobs:
               os: macos-11,
             }
     steps:
+      - name: Check runner
+        run: |
+          uname
+          lscpu
       - name: Check versions
         run: |
-          uname --all
-          lscpu
           clang --version
           clang++ --version
           cmake --version
