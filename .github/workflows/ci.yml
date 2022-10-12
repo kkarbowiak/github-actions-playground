@@ -3,7 +3,7 @@ name: Sniff environment
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   sniff:
