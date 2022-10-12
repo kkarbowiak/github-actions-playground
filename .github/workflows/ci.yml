@@ -1,0 +1,49 @@
+name: Sniff environment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sniff:
+    name: ${{ matrix.config.name }}
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        config:
+          - {
+              name: "Ubuntu latest",
+              os: ubuntu-latest,
+            }
+          - {
+              name: "Ubuntu 22.04",
+              os: ubuntu-22.04,
+            }
+          - {
+              name: "Ubuntu 20.04",
+              os: ubuntu-20.04,
+            }
+          - {
+              name: "macOS latest",
+              os: macos-latest,
+            }
+          - {
+              name: "macOS 12",
+              os: macos-12,
+            }
+          - {
+              name: "macOS 11",
+              os: macos-11,
+            }
+    steps:
+      - name: Check versions
+        run: |
+          uname --all
+          lscpu
+          clang --version
+          clang++ --version
+          cmake --version
+          gcc --version
+          g++ --version
+          git --version
