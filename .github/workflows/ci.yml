@@ -60,7 +60,7 @@ jobs:
       - name: Check runner
         run: |
           uname
-          lscpu
+          sysctl --all
       - name: Check versions
         run: |
           clang --version
