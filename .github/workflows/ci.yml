@@ -48,8 +48,8 @@ jobs:
       matrix:
         config:
           - {
-              name: "macOS latest",
-              os: macos-latest,
+              name: "macOS 15",
+              os: macos-15,
             }
           - {
               name: "macOS 12",
