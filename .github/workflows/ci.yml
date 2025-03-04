@@ -51,10 +51,6 @@ jobs:
               name: "macOS 15",
               os: macos-15,
             }
-          - {
-              name: "macOS 12",
-              os: macos-12,
-            }
     steps:
       - name: Check runner
         run: |
