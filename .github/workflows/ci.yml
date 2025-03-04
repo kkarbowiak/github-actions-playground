@@ -28,17 +28,17 @@ jobs:
           lscpu
       - name: Check versions
         run: |
-          echo "######## clang version ########"
+          echo "\n######## clang version ########"
           clang --version
-          echo "######## clang++ version ########"
+          echo "\n######## clang++ version ########"
           clang++ --version
-          echo "######## cmake version ########"
+          echo "\n######## cmake version ########"
           cmake --version
-          echo "######## gcc version ########"
+          echo "\n######## gcc version ########"
           gcc --version
-          echo "######## g++ version ########"
+          echo "\n######## g++ version ########"
           g++ --version
-          echo "######## git version ########"
+          echo "\n######## git version ########"
           git --version
 
   sniff-macos:
@@ -62,15 +62,15 @@ jobs:
           sysctl -a
       - name: Check versions
         run: |
-          echo "######## clang version ########"
+          echo "\n######## clang version ########"
           clang --version
-          echo "######## clang++ version ########"
+          echo "\n######## clang++ version ########"
           clang++ --version
-          echo "######## cmake version ########"
+          echo "\n######## cmake version ########"
           cmake --version
-          echo "######## gcc version ########"
+          echo "\n######## gcc version ########"
           gcc --version
-          echo "######## g++ version ########"
+          echo "\n######## g++ version ########"
           g++ --version
-          echo "######## git version ########"
+          echo "\n######## git version ########"
           git --version
