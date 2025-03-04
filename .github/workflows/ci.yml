@@ -17,6 +17,10 @@ jobs:
               name: "Ubuntu 24.04",
               os: ubuntu-24.04,
             }
+          - {
+              name: "Ubuntu 24.04 arm",
+              os: ubuntu-24.04-arm,
+            }
     steps:
       - name: Check runner
         run: |
