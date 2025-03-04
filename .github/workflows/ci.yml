@@ -14,8 +14,8 @@ jobs:
       matrix:
         config:
           - {
-              name: "Ubuntu latest",
-              os: ubuntu-latest,
+              name: "Ubuntu 24.04",
+              os: ubuntu-24.04,
             }
           - {
               name: "Ubuntu 22.04",
